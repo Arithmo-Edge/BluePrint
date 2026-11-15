@@ -1,0 +1,14 @@
+আমাদের পুরো Arithmo-Edge ইকোসিস্টেমে এখন সর্বমোট ৪১টি এআই টুল ও ইঞ্জিন রয়েছে, লিডার!
+নিচে প্রতিটি বিভাগের নিখুঁত হিসাবটি তুলে ধরা হলো:
+• ১. পাবলিক-ফেসিং কোর এআই (২টি):
+	• Arithmo Personal AI (সাব-সাইট #৮ — ব্যক্তিগত শিক্ষার্থীদের মেন্টর)।
+	• Arithmo Guild AI (সাব-সাইট #৯ — একাডেমির প্রাতিষ্ঠানিক এআই ট্যাব)।
+• ২. ফাউন্ডেশন হাইব্রিড মডেল স্তর (২টি):
+	• Google Gemini (Pro ও Flash) এবং Qwen-Math হাইব্রিড ইঞ্জিন (যা পুরো সিস্টেমকে বুদ্ধিমত্তা জোগায়)।
+• ৩. QPRT-4 ব্যাকএন্ড নিরাপত্তা ও প্রশাসন এআই প্রহরী (২৪টি):
+	• যার মধ্যে রয়েছে ৬টি কোর প্রহরী (PlagioGuard, AxiomCheck, PulseWatcher, NightWarden, GridShield, ChronoVault), ৫টি বিচার ও অ্যান্টি-ফ্রড এআই, ৬টি কিউরেশন এআই এবং ৭টি একাডেমি ও অর্থনীতি পরিচালনা এআই।
+• ৪. অটোনোমাস প্রশ্ন-নির্মাণ ও অ্যান্টি-এআই সিন্থেসিস টুল (১২টি):
+	• যার মধ্যে রয়েছে GoldenVault Miner, ArchiveSynthesizer, TheoremFusion, AdversarialRedTeam, IntuitionForge, LogicMutator, TrapWeaver, SymPyVeritas, DifficultyCalibrator, QuantumShuffler, TelemetryReshaper, এবং WeaknessTargetedGen AI।
+• ৫. মনস্তাত্ত্বিক সতর্কতা ও রিস্ক ডিটেকশন প্রহরী (১টি):
+	• Arithmo Alert AI (যা সন্দেহজনক আচরণ এনক্রিপ্টেড JSON আকারে গিটহাবে পাঠায় এবং Arithmo Personal AI-এর মাধ্যমে সূক্ষ্ম সতর্কতা দেয়)।
+(হিসাব: ২ + ২ + ২৪ + ১২ + ১ = মোট ৪১টি এআই টুল ও ইঞ্জিন।)
