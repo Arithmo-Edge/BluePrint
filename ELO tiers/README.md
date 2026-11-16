@@ -4,7 +4,7 @@
 
 # 📈 Arithmo-Edge 12-Tier ELO Matrix & Multi-Dimensional Rating Architecture
 
-*Strict No-Mixed ELO Policy • 10 Core Arena ELOs • 60 Specialized Tier Titles • System Expectation Override (`+ΔR`) • Monotonic HQ ELO*
+*Strict No-Mixed ELO Policy • 10 Core Arena ELOs (5 General + 5 Expert) • 60 Specialized Tier Ranks • System Expectation Override (`+ΔR`) • Monotonic HQ ELO*
 
 <div align="center">
 
@@ -23,16 +23,16 @@
 
 <div class="mermaid">
 graph TD
-    subgraph Core Portal [Arithmo-Edge Core Portal]
+    subgraph Core Portal [Arithmo-Edge Core Portal & Subsite #7: All Rounders]
         A[Overall All-Rounder Composite Index]
     end
 
-    subgraph Subsites 1-5 [5 Core Topic Arenas: Subsites #1 to #5]
-        B1[Prime Factors: General & Expert ELO]
-        B2[GCD-LCM: General & Expert ELO]
-        B3[Number of Divisors: General & Expert ELO]
-        B4[Square Root: General & Expert ELO]
-        B5[Sum of Divisors: General & Expert ELO]
+    subgraph Subsites 1-5 [5 Core Olympiad Arenas: Subsites #1 to #5]
+        B1[Number Theory Arena: General & Expert ELO]
+        B2[Algebra Arena: General & Expert ELO]
+        B3[Geometry Arena: General & Expert ELO]
+        B4[Combinatorics & Permutation Arena: General & Expert ELO]
+        B5[Mixed Mathematical Olympiad Arena: General & Expert ELO]
     end
 
     subgraph Social Portal [Subsite #11: Arithmo Socials]
@@ -47,11 +47,11 @@ graph TD
         E[Monotonic HQ ELO - Command Governance]
     end
 
+    A ==>|Primary Anchor| B5
     A --> B1
     A --> B2
     A --> B3
     A --> B4
-    A --> B5
     Core Portal -.-> Subsites 1-5
     Core Portal -.-> Social Portal
     Core Portal -.-> Academy Portal
@@ -60,8 +60,9 @@ graph TD
 
 The **Arithmo-Edge** (*Powered by Olympiad Edge*) rating architecture implements a rigorous **Strict No-Mixed ELO Policy** across **15 Unified Rating Dimensions**:
 
-* **10 Core Arena ELOs (`5 × 2`):** Each of the **5 Core Topic Arenas** maintains completely isolated **`General ELO`** and **`Expert ELO`** ratings. This ensures high-speed computational players cannot artificially inflate Olympiad proof ratings, and vice versa.
-* **1 Overall All-Rounder Rating:** Computed as a weighted composite index displayed on the **Arithmo-Edge Core Portal** and ranked on the global `All Rounders` standing board.
+* **10 Core Arena ELOs (`5 × 2`):** Each of the **5 Core Olympiad Arenas** (`Number Theory`, `Algebra`, `Geometry`, `Combinatorics & Permutation`, and `Mixed Mathematical Olympiad`) maintains completely isolated **`General ELO`** and **`Expert ELO`** ratings, yielding **60 Specialized Tier Ranks** across the five 12-tier ladders. This ensures high-speed computational specialists cannot artificially inflate formal Olympiad proof ratings, and vice versa.
+* **1 Overall All-Rounder Rating (`Subsite #7: All Rounders`):** Computed as a weighted composite index displayed on the **Arithmo-Edge Core Portal** and ranked on the global `All Rounders` standing board. It is **anchored primarily by the Mixed Mathematical Olympiad Arena** while synthesizing composite performance across all four specialized Olympiad branches (`Number Theory`, `Algebra`, `Geometry`, and `Combinatorics & Permutation`).
+* **Strict Blind-Tag Contest Integrity:** Granular subtopic tags (such as `#Modular-Arithmetic`, `#Vieta-Jumping`, `#Inversion`, and `#Pigeonhole`) remain **strictly hidden during live rated contests** across all arenas to preserve authentic Olympiad problem-solving deduction, unlocking solely in unrated practice mode.
 * **1 Global Contribution ELO (`Subsite #11`):** Ranked on a unified `Contributors` leaderboard (`+2 ELO` per HQ-approved Guidebook entry, `+5 ELO` for AI-curated `Blog-to-Lab`, `+3 ELO` for first valid AoPS leak report).
 * **1 Institutional Academy ELO (`Subsite #9`):** A single indivisible rating per school/club computed from team contests (`Inter-Academy Clash`, `Group Contests`) and average member match performance.
 * **1 Command Governance HQ ELO (`Subsites #7 & #12`):** Strictly non-decreasing (`never drops`) and governed by **Strict Positional Chronology**.
@@ -71,102 +72,102 @@ The **Arithmo-Edge** (*Powered by Olympiad Edge*) rating architecture implements
 ## 3. Expandable Deep-Dive Sections
 
 <details>
-<summary><b>Subsite #1 — Prime Factors Arena (#00F0FF Electric Cyan) — Complete 12-Tier Ladder</b></summary>
+<summary><b>Subsite #1 — Number Theory Arena (#00F0FF Electric Cyan) — Complete 12-Tier Ladder</b></summary>
 
-The **Prime Factors** arena evaluates factorization speed, prime decomposition algorithms, and canonical representation proofs across General and Expert tracks. The complete 12-tier progression ladder comprises:
+The **Number Theory Arena** evaluates prime factorization, divisor structures, modular arithmetic, Diophantine analysis, quadratic reciprocity, and analytic number theory across General and Expert tracks. The complete 12-tier progression ladder comprises:
 
-* **Tier 1 (`0–499`):** `FOUNDRY INITIATE` — Introductory factorization drills, trial division up to $\sqrt{N}$, and basic prime checking.
-* **Tier 2 (`500–899`):** `COMPOSITE APPRENTICE` — Standard trial division, wheel factorization implementation, and prime counting bounds.
-* **Tier 3 (`900–1199`):** `SIEVE CALIBRATOR` — Implementation of the Sieve of Eratosthenes, segmented sieving, and memory-optimized bitsets.
-* **Tier 4 (`1200–1399`):** `RADIX SCHOLAR` — Pollard's rho algorithm basics, introductory probabilistic primality tests (Fermat, Miller-Rabin single base).
-* **Tier 5 (`1400–1599`):** `MODULAR OPERATOR` — Deterministic Miller-Rabin bounds, modular arithmetic exponentiation optimizations, and GCD-based factor separation.
-* **Tier 6 (`1600–1799`):** `PRIME STRATEGIST` — Brent's cycle finding modification for Pollard's rho, ECM (Elliptic Curve Method) parameter tuning.
-* **Tier 7 (`1800–1999`):** `LOGARITHMIC VECTOR` — Quadratic sieve introduction, smoothness bounds, and factor base smoothing optimization.
-* **Tier 8 (`2000–2199`):** `EULERIAN SENTINEL` — Advanced quadratic sieve matrix reduction, block Lanczos algorithm integration, and large composite splitting.
-* **Tier 9 (`2200–2399`):** `GAUSSIAN CRYPTOGRAPHER` — General Number Field Sieve (GNFS) polynomial selection and lattice basis reduction (LLL algorithm).
-* **Tier 10 (`2400–2699`):** `CANONICAL ANALYST` — Algebraic number theory factorization, ideal class groups, and complex smoothness analysis.
-* **Tier 11 (`2700–2999`):** `RIEMANN TRANSCENDENTALIST` — Advanced analytic number theory bounds, explicit formulas for prime counting, and zeta zeros correlation.
-* **Tier 12 (`3000+`):** `PRIME SINGULARITY` — Master-level cryptanalytic factor synthesis, RSA modulus breakdown mastery, and quantum factoring complexity reduction.
-
-</details>
-
-<details>
-<summary><b>Subsite #2 — GCD-LCM Arena (#10B981 Mint Emerald) — Complete 12-Tier Ladder</b></summary>
-
-The **GCD-LCM** arena focuses on Euclidean algorithms, Bézout's identity, linear Diophantine equations, and coprime lattice structures:
-
-* **Tier 1 (`0–499`):** `BASE RADICAL` — Basic factor listing, manual greatest common divisor calculations, and prime factor intersection.
-* **Tier 2 (`500–899`):** `EUCLIDEAN INITIATE` — Standard recursive Euclidean algorithm and basic LCM computation via product relations.
-* **Tier 3 (`900–1199`):** `QUOTIENT SCOUT` — Iterative Euclidean implementation, remainder sequence tracking, and binary GCD algorithms.
-* **Tier 4 (`1200–1399`):** `DIVISOR VANGUARD` — Extended Euclidean Algorithm (EEA) for finding Bézout coefficients $ax + by = \gcd(a,b)$.
-* **Tier 5 (`1400–1599`):** `COPRIME OPERATOR` — Solving linear Diophantine equations in two variables, validity checks, and modular inverses.
-* **Tier 6 (`1600–1799`):** `LINEAR COMBINATOR` — Multi-variable linear Diophantine systems and simultaneous congruence solvers.
-* **Tier 7 (`1800–1999`):** `ALGORITHM TACTICIAN` — Matrix-based Euclidean reduction, continued fraction convergents of rational numbers.
-* **Tier 8 (`2000–2199`):** `DIOPHANTINE VECTOR` — Higher-dimensional integer lattices, Hermite normal form, and Smith normal form computations.
-* **Tier 9 (`2200–2399`):** `CONGRUENCE OVERLORD` — Chinese Remainder Theorem extensions for non-coprime moduli and structural congruence rings.
-* **Tier 10 (`2400–2699`):** `REMAINDER ARCHON` — Advanced modular lattice reductions and simultaneous polynomial GCD over finite fields.
-* **Tier 11 (`2700–2999`):** `INFINITE PRODUCT` — Dirichlet series involving GCD convolutions and asymptotic mean behavior of arithmetic functions.
-* **Tier 12 (`3000+`):** `EUCLIDEAN SINGULARITY` — Apex-level abstract algebra homomorphism proofs, Euclidean domain classification, and principal ideal domain mastery.
+* **Tier 1 (`0–499`):** `FOUNDRY INITIATE` — Prime vs. composite classification, parity arguments, basic divisibility rules, and manual trial division up to $\sqrt{N}$.
+* **Tier 2 (`500–899`):** `COMPOSITE APPRENTICE` — Canonical prime factorization, fundamental Euclidean algorithm steps, and elementary $\gcd/\operatorname{lcm}$ identities.
+* **Tier 3 (`900–1199`):** `SIEVE SCOUT` — Sieve of Eratosthenes optimizations, prime power valuations $v_p(n!)$ via Legendre's formula, and basic remainder cycles.
+* **Tier 4 (`1200–1399`):** `DIVISOR VANGUARD` — Multiplicative arithmetic functions ($\tau(n)$, $\sigma(n)$, $\varphi(n)$), Bézout's identity, and Extended Euclidean Algorithm coefficients.
+* **Tier 5 (`1400–1599`):** `MODULAR OPERATOR` — Modular inverses, Fermat's Little Theorem, Euler's Totient Theorem, and Wilson's Theorem applications.
+* **Tier 6 (`1600–1799`):** `CONGRUENCE STRATEGIST` — Chinese Remainder Theorem (CRT) systems for coprime and non-coprime moduli, Hensel's Lemma lifting, and multiplicative orders.
+* **Tier 7 (`1800–1999`):** `DIOPHANTINE VECTOR` — Linear and non-linear Diophantine equations, Pythagorean triples, Pell's equations $x^2 - Dy^2 = \pm 1$, and infinite descent.
+* **Tier 8 (`2000–2199`):** `EULERIAN SENTINEL` — Primitive roots modulo $p^k$, discrete logarithms, Lifting the Exponent (LTE) Lemma, and Zsigmondy's Theorem.
+* **Tier 9 (`2200–2399`):** `GAUSSIAN OVERLORD` — Quadratic residues, Legendre and Jacobi symbols, Law of Quadratic Reciprocity, and Gauss sums.
+* **Tier 10 (`2400–2699`):** `DIRICHLET ARCHON` — Arithmetic progressions, Dirichlet convolution, Möbius inversion, cyclotomic polynomials, and algebraic integer rings.
+* **Tier 11 (`2700–2999`):** `RIEMANN TRANSCENDENTALIST` — Analytic number theory bounds, Dirichlet L-functions, Prime Number Theorem asymptotics, and sieve method estimates.
+* **Tier 12 (`3000+`):** `ARITHMETIC SINGULARITY` — Apex-level IMO Shortlist N7/N8 synthesis, deep class field connections, and research-grade arithmetic geometry proofs.
 
 </details>
 
 <details>
-<summary><b>Subsite #3 — Number of Divisors Arena (#8B5CF6 Vibrant Violet) — Complete 12-Tier Ladder</b></summary>
+<summary><b>Subsite #2 — Algebra Arena (#8B5CF6 Vibrant Violet) — Complete 12-Tier Ladder</b></summary>
 
-The **Number of Divisors $\tau(N)$** arena explores multiplicative divisor functions, divisor bounds, and Dirichlet convolution properties:
+The **Algebra Arena** governs algebraic manipulation, polynomial roots, classical and Olympiad inequalities, recurrence relations, functional equations, and abstract algebraic structures:
 
-* **Tier 1 (`0–499`):** `DIVISOR NOVICE` — Manual counting of divisors for small integers and basic prime exponentiation formulas.
-* **Tier 2 (`500–899`):** `FACTOR SEEKER` — Applying $\tau(p_1^{e_1} p_2^{e_2} \dots) = \prod (e_i + 1)$ for standard composite integers.
-* **Tier 3 (`900–1199`):** `PRIME POWER SCOUT` — Prefixed divisor count arrays and linear sieve calculation of $\tau(n)$ up to $10^7$.
-* **Tier 4 (`1200–1399`):** `DIVISOR COUNT TACTICIAN` — Investigating highly composite numbers and properties of numbers with maximal divisor counts.
-* **Tier 5 (`1400–1599`):** `ODD-EVEN OPERATOR` — Parity characterization of $\tau(n)$ ($\tau(n)$ is odd if and only if $n$ is a square).
-* **Tier 6 (`1600–1799`):** `DIVISOR SUMMATION VOYAGER` — Dirichlet divisor problem introductory bounds and partial sum approximations $\sum_{n \le x} \tau(n)$.
-* **Tier 7 (`1800–1999`):** `HIGHLY COMPOSITE VANGUARD` — Ramanujan's highly composite number analysis and growth rate bounds.
-* **Tier 8 (`2000–2199`):** `RADICAL STRATEGIST` — Average order of multiplicative functions and error term estimations in divisor sums ($\Delta(x)$).
-* **Tier 9 (`2200–2399`):** `DIVISOR DENSITY OVERLORD` — Dirichlet hyperbola method for evaluating summatory functions of Dirichlet convolutions.
-* **Tier 10 (`2400–2699`):** `DIRICHLET ARCHON` — Voronoi summation formula applications and sharp bounds on the error term $\Delta(x)$.
-* **Tier 11 (`2700–2999`):** `VORONOI TRANSCENDENT` — Complex analytic proofs of mean value theorems for divisor functions on the critical line.
-* **Tier 12 (`3000+`):** `DIVISOR SINGULARITY` — Cutting-edge research level conjectures on divisor function variance and shifted convolution sums.
-
-</details>
-
-<details>
-<summary><b>Subsite #4 — Square Root Arena (#F59E0B Laser Amber) — Complete 12-Tier Ladder</b></summary>
-
-The **Square Root** arena masters radical simplification, surd arithmetic, Pell's equations, and continued fraction representations:
-
-* **Tier 1 (`0–499`):** `RADICAL APPRENTICE` — Extracting perfect squares, basic surd multiplication, and rationalizing simple denominators.
-* **Tier 2 (`500–899`):** `SQUARE FINDER` — Integer square root algorithms (`isqrt`) via binary search and Newton-Raphson iterations.
-* **Tier 3 (`900–1199`):** `SURD SCOUT` — Denominator rationalization with binomial surds and radical expression nesting simplifications.
-* **Tier 4 (`1200–1399`):** `RATIONALIZER TACTICIAN` — Continued fraction expansions of quadratic irrationals and periodic representations.
-* **Tier 5 (`1400–1599`):** `PELLIAN ROOT OPERATOR` — Solving fundamental Pell's equations $x^2 - Dy^2 = 1$ using continued fractions.
-* **Tier 6 (`1600–1799`):** `CONTINUED FRACTION WEAVER` — Lagrange's theorem on periodic continued fractions and convergent bounds.
-* **Tier 7 (`1800–1999`):** `QUADRATIC IRRATIONAL VANGUARD` — General quadratic Diophantine equations and unit groups in real quadratic fields.
-* **Tier 8 (`2000–2199`):** `SQUARE-FREE STRATEGIST` — Square-free kernel computations, square-free density proofs, and Möbius inversion applications.
-* **Tier 9 (`2200–2399`):** `PELL-FERMAT OVERLORD` — Chakravala method for solving quadratic indeterminate equations and high-order fundamental units.
-* **Tier 10 (`2400–2699`):** `TRANSCENDENTAL ARCHON` — Algebraic independence proofs, Liouville numbers, and irrationality measure theorems.
-* **Tier 11 (`2700–2999`):** `EQUIDISTRIBUTION TRANSCENDENT` — Weyl's criterion for uniform distribution modulo 1 applied to square root sequences.
-* **Tier 12 (`3000+`):** `RADICAL SINGULARITY` — Advanced transcendental number theory, Baker's theorem on linear forms in logarithms, and class number formulas.
+* **Tier 1 (`0–499`):** `VARIABLE INITIATE` — Algebraic identities, factoring quadratics, linear systems, and elementary exponent rules.
+* **Tier 2 (`500–899`):** `LINEAR APPRENTICE` — System elimination techniques, telescoping sums/products, and rational expression simplifications.
+* **Tier 3 (`900–1199`):** `QUADRATIC SCOUT` — Discriminant analysis, Vieta's formulas for degree-2 and degree-3 equations, and vertex optimization.
+* **Tier 4 (`1200–1399`):** `POLYNOMIAL VANGUARD` — Remainder and Factor Theorems, Rational Root Theorem, symmetric polynomials, and Newton's sums.
+* **Tier 5 (`1400–1599`):** `INEQUALITY OPERATOR` — AM-GM-HM chains, Triangle Inequality, Rearrangement Inequality, and SOS (Sum of Squares) decompositions.
+* **Tier 6 (`1600–1799`):** `RECURRENCE STRATEGIST` — Linear homogeneous/non-homogeneous recurrences, characteristic equations, and mathematical induction proofs.
+* **Tier 7 (`1800–1999`):** `FUNCTIONAL VECTOR` — Cauchy's functional equation, injectivity/surjectivity arguments, involution substitutions, and fixed-point analysis.
+* **Tier 8 (`2000–2199`):** `CAUCHY-SCHWARZ SENTINEL` — Titu's Lemma, Hölder's Inequality, Minkowski's Inequality, Chebyshev's Inequality, and Jensen's convexity bounds.
+* **Tier 9 (`2200–2399`):** `VIETA OVERLORD` — Vieta jumping (root flipping) techniques, Schur's Inequality, Muirhead's majorization, and Lagrange multipliers.
+* **Tier 10 (`2400–2699`):** `GALOIS ARCHON` — Irreducibility criteria (Eisenstein, Perron, Cohn), field extensions, roots of unity filters, and Galois group symmetries.
+* **Tier 11 (`2700–2999`):** `ABELIAN TRANSCENDENT` — Commutative ring homomorphisms, functional equations over dense subsets, and advanced spectral operator bounds.
+* **Tier 12 (`3000+`):** `ALGEBRAIC SINGULARITY` — Apex-level IMO A7/A8 algebraic synthesis, deep polynomial interpolation theorems, and non-trivial algebraic variety proofs.
 
 </details>
 
 <details>
-<summary><b>Subsite #5 — Sum of Divisors σ(N) Arena (#F43F5E Nebula Rose) — Complete 12-Tier Ladder</b></summary>
+<summary><b>Subsite #3 — Geometry Arena (#F59E0B Laser Amber) — Complete 12-Tier Ladder</b></summary>
 
-The **Sum of Divisors $\sigma(N)$** arena explores aliquot sums, multi-perfect numbers, amicable pairs, and arithmetic summatory functions:
+The **Geometry Arena** tests synthetic Euclidean intuition, angle chasing, circle theorems, projective configurations, geometric transformations, and analytic coordinate methods:
 
-* **Tier 1 (`0–499`):** `FACTOR ADDER` — Manual computation of divisor sums for small integers and basic prime power formulas.
-* **Tier 2 (`500–899`):** `ALIQUOT INITIATE` — Computing proper divisors, aliquot sequences, and identifying deficient or abundant numbers.
-* **Tier 3 (`900–1199`):** `DIVISOR SERIES SCOUT` — Multiplicative property applications: $\sigma(p_1^{e_1}\dots) = \prod \frac{p_i^{e_i+1}-1}{p_i-1}$.
-* **Tier 4 (`1200–1399`):** `PERFECT NUMBER VANGUARD` — Euclid-Euler theorem implementation for even perfect numbers and Mersenne prime verification.
-* **Tier 5 (`1400–1599`):** `AMICABLE OPERATOR` — Finding amicable pairs $(\sigma(a) = \sigma(b) = a+b)$ and sociable number cycles.
-* **Tier 6 (`1600–1799`):** `MULTIPLICATIVE WEAVER` — Linear sieve implementations for prefix sums of $\sigma_k(n)$ up to massive limits.
-* **Tier 7 (`1800–1999`):** `ABUNDANCE TACTICIAN` — Robin's theorem and Nicolas's criteria relating $\sigma(n)$ to the Riemann Hypothesis.
-* **Tier 8 (`2000–2199`):** `SIGMA-K VECTOR` — Sums of powers of divisors $\sigma_k(n) = \sum_{d|n} d^k$ and Lambert series expansions.
-* **Tier 9 (`2200–2399`):** `EULER PENTAGONAL OVERLORD` — Euler's pentagonal number theorem and partition function recurrence relations involving divisor sums.
-* **Tier 10 (`2400–2699`):** `GRONWALL-ROBIN ARCHON` — Maximal order bounds for $\sigma(n)$ and asymptotic growth analysis ($\limsup \frac{\sigma(n)}{n \log \log n} = e^\gamma$).
-* **Tier 11 (`2700–2999`):** `EISENSTEIN TRANSCENDENT` — Modular forms, weight-$k$ Eisenstein series, and divisor sum arithmetic properties.
-* **Tier 12 (`3000+`):** `SIGMA SINGULARITY` — Advanced spectral theory of automorphic forms and Ramanujan tau conjecture verifications.
+* **Tier 1 (`0–499`):** `EUCLIDEAN INITIATE` — Parallel line transversals, triangle congruence criteria, Pythagorean theorem, and basic polygon area formulas.
+* **Tier 2 (`500–899`):** `ANGLE APPRENTICE` — Triangle similarity, Thales' Intercept Theorem, exterior angle chasing, and basic inscribed circle arcs.
+* **Tier 3 (`900–1199`):** `CHORD SCOUT` — Inscribed Angle Theorem, tangent-chord angles, Power of a Point basics, and cyclic triangle properties.
+* **Tier 4 (`1200–1399`):** `CEVIAN VANGUARD` — Classical triangle centers (incenter, circumcenter, orthocenter, centroid), Ceva's Theorem, and Menelaus' Theorem.
+* **Tier 5 (`1400–1599`):** `CYCLIC OPERATOR` — Cyclic quadrilaterals, Ptolemy's Theorem, Simson lines, and nine-point circle configurations.
+* **Tier 6 (`1600–1799`):** `RADICAL AXIS STRATEGIST` — Radical axes and radical centers, coaxal circle systems, Stewart's Theorem, and Euler's line geometry.
+* **Tier 7 (`1800–1999`):** `HOMOTHETY VECTOR` — Spiral similarity, homothety centers of circles, Mixtilinear incircles, and Nagel/Gergonne point dualities.
+* **Tier 8 (`2000–2199`):** `INVERSION SENTINEL` — Geometric inversion across circles, orthogonal circle families, $\sqrt{bc}$-inversion, and Casey's Theorem.
+* **Tier 9 (`2200–2399`):** `BARYCENTRIC OVERLORD` — Barycentric coordinates, complex number bash on the unit circle, isogonal conjugates, and symmedians.
+* **Tier 10 (`2400–2699`):** `PROJECTIVE ARCHON` — Cross-ratios, harmonic bundles, Pascal's and Brianchon's Theorems, Desargues' Theorem, and pole-polar duality.
+* **Tier 11 (`2700–2999`):** `RIEMANNIAN TRANSCENDENT` — Moving points method, projective transformations, Poncelet's Porism, and differential/metric geometry invariants.
+* **Tier 12 (`3000+`):** `GEOMETRIC SINGULARITY` — Apex-level IMO G7/G8 synthetic mastery, hyper-dimensional projective configurations, and master-tier configuration synthesis.
+
+</details>
+
+<details>
+<summary><b>Subsite #4 — Combinatorics & Permutation Arena (#10B981 Mint Emerald) — Complete 12-Tier Ladder</b></summary>
+
+The **Combinatorics & Permutation Arena** explores enumerative counting, bijections, invariants, extremal arguments, graph theory, generating functions, and Ramsey theory:
+
+* **Tier 1 (`0–499`):** `COUNTING INITIATE` — Addition and multiplication rules, basic factorials, and elementary ordered vs. unordered selections.
+* **Tier 2 (`500–899`):** `FACTORIAL APPRENTICE` — Permutations with repetition, circular arrangements, derangements basics, and grid path counting.
+* **Tier 3 (`900–1199`):** `BINOMIAL SCOUT` — Binomial coefficients, Pascal's identity, Hockey-Stick Identity, Stars and Bars, and Principle of Inclusion-Exclusion (PIE).
+* **Tier 4 (`1200–1399`):** `PIGEONHOLE VANGUARD` — Dirichlet's Pigeonhole Principle, double counting arguments, and basic parity/coloring tilings.
+* **Tier 5 (`1400–1599`):** `INVARIANT OPERATOR` — Monovariants, state-space invariants, modular coloring proofs, and game-theoretic winning strategies (Nim/Wythoff).
+* **Tier 6 (`1600–1799`):** `EXTREMAL STRATEGIST` — Extremal Principle (minimal/maximal element selection), convex hull arguments, and greedy algorithmic bounds.
+* **Tier 7 (`1800–1999`):** `GRAPH VECTOR` — Eulerian and Hamiltonian paths, spanning trees, Cayley's formula, Hall's Marriage Theorem, and planar graph Euler's formula.
+* **Tier 8 (`2000–2199`):** `GENERATING SENTINEL` — Ordinary and exponential generating functions, Catalan and Stirling numbers, and recurrence partition bijections.
+* **Tier 9 (`2200–2399`):** `RAMSEY OVERLORD` — Graph and hypergraph Ramsey numbers, Schur's Theorem, Van der Waerden's Theorem, and chromatic polynomials.
+* **Tier 10 (`2400–2699`):** `ERGODIC ARCHON` — Probabilistic method (linearity of expectation, alteration, Lovász Local Lemma) and combinatorial nullstellensatz.
+* **Tier 11 (`2700–2999`):** `TURÁN TRANSCENDENT` — Extremal graph theory, Turán's Theorem, Szemerédi's Regularity Lemma, and discrete incidence geometry.
+* **Tier 12 (`3000+`):** `COMBINATORIAL SINGULARITY` — Apex-level IMO C7/C8 synthesis, deep topological combinatorics (Borsuk-Ulam), and research-grade extremal set theory.
+
+</details>
+
+<details>
+<summary><b>Subsite #5 — Mixed Mathematical Olympiad Arena (#F43F5E Nebula Rose) — Complete 12-Tier Ladder</b></summary>
+
+The **Mixed Mathematical Olympiad Arena** is the premier cross-disciplinary proving ground of Arithmo-Edge, featuring authentic IMO-style synthesis problems that fuse Number Theory, Algebra, Geometry, and Combinatorics without topic labels:
+
+* **Tier 1 (`0–499`):** `OLYMPIAD INITIATE` — Foundational multi-step reasoning puzzles bridging basic arithmetic, elementary algebra, and spatial intuition.
+* **Tier 2 (`500–899`):** `AXIOM APPRENTICE` — Structured proof-writing hygiene, casework completeness, and introductory cross-topic word problems.
+* **Tier 3 (`900–1199`):** `DEDUCTION SCOUT` — Blind-topic identification (distinguishing algebraic vs. combinatorial structure) and AMC/AIME-tier hybrid problems.
+* **Tier 4 (`1200–1399`):** `THEOREM VANGUARD` — Multi-lemma proof construction combining modular arithmetic with polynomial roots or geometric invariants.
+* **Tier 5 (`1400–1599`):** `SYNTHESIS OPERATOR` — Algebraic-geometric hybrids (trigonometric identities in triangles) and arithmetic combinatorics on grids.
+* **Tier 6 (`1600–1799`):** `HYBRID STRATEGIST` — National Olympiad (BMO/USAMO/RMO) Problem 1/4 caliber synthesis requiring two distinct domain shifts.
+* **Tier 7 (`1800–1999`):** `HEURISTIC VECTOR` — Complex number geometry merged with cyclotomic number theory, and extremal graph arguments over algebraic fields.
+* **Tier 8 (`2000–2199`):** `PARADOX SENTINEL` — Non-obvious dualities, generating functions applied to Diophantine counting, and projective-combinatorial incidence proofs.
+* **Tier 9 (`2200–2399`):** `POLYMATHEMATICAL OVERLORD` — IMO Problem 2/5 caliber mastery seamlessly uniting Vieta jumping, inequalities, and invariant state spaces.
+* **Tier 10 (`2400–2699`):** `ARCHIMEDEAN ARCHON` — Deep cross-branch reductions using Combinatorial Nullstellensatz on number-theoretic lattices and analytic bounds.
+* **Tier 11 (`2700–2999`):** `HILBERTIAN TRANSCENDENT` — IMO Shortlist hardest-tier synthesis requiring simultaneous command of all four core mathematical pillars.
+* **Tier 12 (`3000+`):** `OMNI-OLYMPIAD SINGULARITY` — The supreme apex of Arithmo-Edge: IMO Problem 3/6 grandmaster unification across all branches of Olympiad mathematics.
 
 </details>
 
@@ -181,8 +182,9 @@ Rating changes are computed via the core delta formula:
 In both multi-player contests and rated **1v1 Bullet Blitz** matches, if an underdog faces significantly higher-rated opponents and **loses narrowly**, but their solve accuracy and millisecond speed outperform the system's expected performance curve, **System Expectation Override** awards **positive ELO (`+ΔR`)** instead of penalizing a close defeat.
 
 #### 2. 1v1 Bullet Blitz & Anti-Boosting Guardrails (`Subsite #6`)
-* Winning against higher-rated opponents yields amplified ELO gains; updates apply strictly to the specific topic arena played.
+* Winning against higher-rated opponents yields amplified ELO gains; updates apply strictly to the specific Olympiad arena played.
 * **Pairwise 24h Cap (`Arithmo CollusionHunter AI`):** Only the **first `2` matches within 24 hours** between the exact same pair of opponents are rated; subsequent matches become unrated, and direct challenges with `> ±250 ELO` gap are unrated.
+* **Blind-Tag Live Enforcement:** During live rated matches and contests, subtopic tags (`#Modular-Arithmetic`, `#Vieta-Jumping`, `#Inversion`, `#Pigeonhole`) are strictly stripped from problem headers and only revealed in unrated practice mode.
 
 #### 3. Segment Rating Caps, Forced Unrated & Virtual Gym Projections
 * Exceeding a segment's ELO cap (`>1199`, `>1799`, `>2399`) forces **Unrated Registration**.
