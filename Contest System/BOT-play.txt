@@ -1,0 +1,49 @@
+When a competitor moves the Custom Bot ELO Slider to any exact number (e.g., 2885), the UI dynamically resolves and displays the corresponding Predefined Bot Persona Name & Handle alongside the exact ELO (2885 · Vanguard BOT):
+• Tier 1 (0 – 499 ELO): Spark (@spark_bot) — Foundational arithmetic & elementary intuition sparring bot.
+• Tier 2 (500 – 899 ELO): Novice (@novice_bot) — Early factorization, basic ratios, and introductory patterns.
+• Tier 3 (900 – 1199 ELO): Scout (@scout_bot) — Steady regional contest pacing with occasional mid-step traps.
+• Tier 4 (1200 – 1399 ELO): Tactician (@tactician_bot) — Disciplined intermediate solver punishing careless calculation slips.
+• Tier 5 (1400 – 1599 ELO): Striker (@striker_bot) — Fast-tempo modular & algebraic manipulator built for bullet pressure.
+• Tier 6 (1600 – 1799 ELO): Strategist (@strategist_bot) — Calculated multi-step deduction engine with sharp time management.
+• Tier 7 (1800 – 1999 ELO): Vector (@vector_bot) — High-precision national Olympiad contender simulating clean heuristic leaps.
+• Tier 8 (2000 – 2199 ELO): Sentinel (@sentinel_bot) — Relentless defensive grinder that rarely misses edge cases or bounds.
+• Tier 9 (2200 – 2399 ELO): Overlord (@overlord_bot) — Commanding master-tier sparring bot calibrated to top national finalists.
+• Tier 10 (2400 – 2699 ELO): Archon (@archon_bot) — Elite grandmaster-grade engine simulating IMO-level creative synthesis.
+• Tier 11 (2700 – 2999 ELO): Vanguard (@vanguard_bot) — Near-flawless transcendent sparring bot (e.g., 2885 · Vanguard BOT).
+• Tier 12 (3000+ ELO): Apex (@apex_bot) — Supreme Singularity-class mathematical entity (3000+ · Apex BOT).
+
+How the Custom ELO Slider Works (Shadow Bot Gauntlet):
+
+• Default Launch: Starts automatically at User Live ELO + 50 (resolving dynamically to whichever of the 12 personas matches that exact ELO) in Rated mode.
+• Exact ELO Slider (0 to 3200+): The user drags the slider to set an exact numerical ELO (e.g., 1640 → Strategist BOT, 2885 → Vanguard BOT, 3050 → Apex BOT)—never picking a bracket manually.
+• Rating Enforcement: Setting the exact ELO below the user's current live ELO automatically locks the match to Unrated (0 ELO change); setting it equal to or higher than the user's live ELO defaults to Rated (with a toggle if the user prefers an Unrated practice run).
+
+
+ Shadow Bot Gauntlet (বট প্লে-জোন)-এর সাবস্ক্রিপশন-ভিত্তিক কোটা ও ইলো কাস্টমাইজেশন সীমাবদ্ধতাগুলো স্থায়ীভাবে লক করা হলো—এবং তার সাথে সামঞ্জস্য রেখে ৫টি সাশ্রয়ী Pay-As-You-Go মাইক্রো-প্যাক নিচে সাজিয়ে দিলাম।
+
+১. Shadow Bot Gauntlet সাবস্ক্রিপশন কোটা ও ইলো কাস্টম সীমা (Locked Rules)
+
+• FREE ($0.00/mo):
+	• মাসিক ও দৈনিক কোটা: মাসে সর্বোচ্চ 10টি বট ম্যাচ, দিনে সর্বোচ্চ 1টি।
+	• ইলো কাস্টমাইজেশন: বন্ধ (Locked) — শুধুমাত্র ডিফল্ট User Live ELO + 50 (Rated) বটের সাথে খেলতে পারবেন।
+• PLUS ($2.99/mo):
+	• মাসিক ও দৈনিক কোটা: মাসে সর্বোচ্চ 20টি বট ম্যাচ, দিনে সর্বোচ্চ 2টি।
+	• ইলো কাস্টমাইজেশন: অনুমোদিত, তবে নিজের বর্তমান লাইভ ইলো-র চেয়ে সর্বোচ্চ ±200 ELO সীমার মধ্যে কাস্টম ইলো সেট করতে পারবেন।
+• PRO / PREMIUM ($5.99/mo):
+	• মাসিক ও দৈনিক কোটা: মাসে সর্বোচ্চ 50টি বট ম্যাচ, দিনে সর্বোচ্চ 3টি।
+	• ইলো কাস্টমাইজেশন: সম্পূর্ণ সীমাহীন (Unbounded Custom ELO) — 0 থেকে 3200+ (Spark থেকে Apex BOT পর্যন্ত) যেকোনো ইলো সেট করতে পারবেন।
+• SINGULARITY ($12.99/mo):
+	• মাসিক ও ঘণ্টাভিত্তিক কোটা: মাসে সর্বোচ্চ 150টি বট ম্যাচ, কোনো দৈনিক সীমা নেই (No Daily Cap), তবে ফেয়ার-প্লে ও অ্যান্টি-বট ফার্মিংয়ের জন্য প্রতি ঘণ্টায় সর্বোচ্চ 2টি।
+	• ইলো কাস্টমাইজেশন: সম্পূর্ণ সীমাহীন (Unbounded Custom ELO)।
+(নোট: আগের মতোই নিজের ইলো-র নিচে কাস্টম ইলো সেট করলে ম্যাচটি Unrated হবে, আর সমান বা বেশি সেট করলে ডিফল্ট Rated বা ব্যবহারকারীর ইচ্ছায় Unrated হবে।)
+
+
+• 1. Zero Quota Deduction on Disconnects or Technical Glitches:
+	• If a user's connection drops or GridShield detects an outage during a Shadow Bot Gauntlet match, the match pauses or voids cleanly without deducting their daily/monthly bot quota or Pay-As-You-Go pack tokens.
+• 2. Cross-Arena Shared Monthly/Daily Bot Pool:
+	• Clarify whether the bot quota (10/mo Free, 20/mo Plus, 50/mo Pro, 150/mo Singularity) is shared across all 5 Core Arenas combined (which prevents users from farming 5 × 150 = 750 rated bot matches/month to inflate ELO).
+• 3. Bot ELO K-Factor Dampening (Anti-Inflation Guard):
+	• When playing rated matches against Shadow Bots (or 30s/60s Stealth Fallback Bots), apply a standard 0.75× K-factor multiplier (e.g., max +15 ELO instead of +20 ELO) so human-vs-human rated contests and live 1v1 duels remain the fastest way to climb the leaderboard.
+• 4. Post-Match Bot Reveal Policy (Transparency vs. Immersion):
+	• In Shadow Bot Gauntlet, the user already knows they are sparring against a named bot (2885 · Vanguard BOT).
+	• In Ranked Arena Duel (60s fallback) or Direct Rival Challenge (5-min + 30s fallback), the Stealth Bot keeps its realistic @handle during the match—and after the match ends, remains seamlessly indistinguishable in match history to preserve competitive immersion (while flagged internally as isStealthBot: true so it never pollutes the public Standings Portal).
