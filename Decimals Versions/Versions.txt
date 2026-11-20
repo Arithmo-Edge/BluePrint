@@ -1,0 +1,33 @@
+
+২৫-দিনের দশমিক ভার্সন রোলআউট পরিকল্পনা (Dec 7 – Dec 31, 2026)
+
+
+Phase 0: দ্য ১০-ডে কোর বিল্ড ও ইন্টারনাল অডিট (Nov 20 – Dec 6, 2026)
+
+• কাজ: ক্লদ কোড দিয়ে পুরো ইকোসিস্টেমের কোর কোড, ফায়ারবেস, ক্লাউডফ্লেয়ার ওয়ার্কার, সাব-সাইট এবং কো-ফাউন্ডারদের 5 × 4 গোল্ডেন কোয়েশ্চেন ব্যাংক ভল্ট তৈরি ও প্রাইভেট অডিট সম্পন্ন করা।
+
+Series 1: V1.0 – V1.3 (কোর পোর্টাল, ৫টি এরিনা ও 1v1 বট এরিনা) — Dec 7 – Dec 14
+
+• V1.0 (December 7, 2026 — Genesis Launch): Core Portal (Arithmo-Edge) + ৫টি কোর এরিনা (Number Theory, Algebra, Geometry, Combinatorics, Mixed Olympiad) + ফ্রিকশনলেস গেস্ট অ্যাক্সেস ও কাস্টম @handle সাইন-আপ।
+• V1.1 (December 9, 2026): ৫টি এরিনার Contest ট্যাবে 1v1 সিস্টেম (Ranked Arena Duel 60s ফলব্যাক + Direct Rival Challenge 5-min কোটা-সেফ URL)।
+• V1.2 (December 11, 2026): Shadow Bot Gauntlet (Spark থেকে Apex BOT পর্যন্ত ১২টি বট পার্সোনা + কাস্টম ইলো স্লাইডার) এবং Public Standings (Subsite #7 — ১৪টি লাইভ বোর্ড)।
+• V1.3 (December 13, 2026): Free Printable Guidebook (KaTeX রেন্ডারারসহ) ও ক্রস-সাইট গ্লোবাল নোটিফিকেশন বেল।
+
+Series 2: V2.0 – V2.3 (লাইভ কনটেস্ট, Proof Grading, Find the Flaw ও সোশ্যালস) — Dec 15 – Dec 22
+
+• V2.0 (December 15, 2026): Contest Section Portal (Subsite #6) — ৭-দিনের সাপ্তাহিক ক্যালেন্ডার ও T-30s প্রি-ম্যাচ কন্ট্রাক্ট পেইজ (প্রবলেমসেটার, অডিটর ও টেস্টারদের নাম ও @handle-সহ)।
+• V2.1 (December 17, 2026): General Velocity Flow (Overtime Loop + Mobile Touch Numpad) এবং ৩-কলাম Toph.co-স্টাইল Expert Dashboard (Max 2 Submissions + Live Clarifications)।
+• V2.2 (December 19, 2026): এক্সপার্ট সেগমেন্ট ১ ও ২-এ Proof-Based Grading + 2000+ ELO Peer Review, ইন-ব্রাউজার Drag-and-Drop LaTeX + GeoGebra টুল, এবং পোস্ট-কনটেস্ট Find the Flaw।
+• V2.3 (December 21, 2026): Arithmo Socials (Subsite #11) (ব্লগ, Blog-to-Lab +5 ELO, 2000+ Q&A, ফরেনসিক আপিল পোর্টাল) + Headquarters Core (Subsite #12)।
+
+Series 3: V3.0 – V3.3 (এআই মেন্টর, একাডেমি এরিনা, ফোর্জ ও স্টোর) — Dec 23 – Dec 29
+
+• V3.0 (December 23, 2026): Arithmo Personal AI (Subsite #8) (ইন-চ্যাট ডুয়াল-মডেল সিলেকশন ও সেম্যান্টিক টোকেন মিটারিংসহ) + QPRT-4 & Arithmo Alert AI Soft-Pinch সুরক্ষা।
+• V3.1 (December 25, 2026): Arithmo Academy Arena (Subsite #9) — ৪টি একাডেমি প্যাকেজ, Arithmo Guild AI, KYB অনবোর্ডিং পপ-আপ, Task হোমওয়ার্ক ট্যাব এবং এক্সক্লুসিভ Academy Guidebook।
+• V3.2 (December 27, 2026): Arithmo Forge (Subsite #10) (1500+ ELO প্রবলেমসেটিং স্টুডিও) + Personal Subscriptions (Plus, Pro, Singularity), 8 Pay-As-You-Go প্যাক ও Arithmo Wallet।
+• V3.3 (December 29, 2026): Offline-First Installable PWA (Service Workers + IndexedDB) এবং AI Smart Mistake Deck (7-day স্পেসড-রিপিটিশন ফ্ল্যাশকার্ড)।
+
+Series 4: V4.0 (গ্র্যান্ড সিঙ্গুলারিটি ও Arithmo Database লঞ্চ) — December 31, 2026 (12:00 Midnight)
+
+• V4.0 (December 31, 2026 — 12:00 Midnight — Grand Singularity Release):
+	• কাউন্টডাউন টাইমার শূন্য হওয়ার সাথে সাথে ১৪তম ওয়েবসাইট Arithmo Database (Subsite #13 — এরিথমোর সব পুরোনো প্রশ্ন + IMO, Putnam, RMM, BMO, BdMO আর্কাইভ + এআই-নির্মিত ধাপভিত্তিক এডিটোরিয়াল), Sunday Mega Arena Contest, এবং Top 128 Annual World Cup (👑) পূর্ণাঙ্গ রূপে উন্মুক্ত হবে!
