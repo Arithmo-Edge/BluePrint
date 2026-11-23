@@ -1,0 +1,109 @@
+একজন ইউজার যেন নিজেই ৩টি ভুয়া জিমেইল খুলে $2.00 রেফারেল বোনাস হ্যাক করতে না পারে, সেজন্য "মাল্টি-লেয়ার ফিঙ্গারপ্রিন্টিং + কগনিটিভ বিহেভিয়ারাল চেক" ব্যবহার করতে হবে—যা আপনার নিজের আর্কিটেকচারের CollusionHunter AI-এরই অংশ।
+এছাড়া ইউজার কীভাবে এটি দাবি করবে, তাও সম্পূর্ণ স্বয়ংক্রিয় করা যায়। নিচে দুটি প্রশ্নেরই নিখুঁত সমাধান দেওয়া হলো:
+
+১. কীভাবে নিশ্চিত করবেন ৩টি জিমেইল একই ব্যক্তির নয়? (৫-স্তরের সুরক্ষা)
+
+শুধু আইপি (IP Address) চেক করলে সমস্যা হতে পারে—কারণ স্কুল বা কলেজের একই ওয়াই-ফাই থেকে ৩ জন আসল বন্ধুও খেলতে পারে! তাই আসল বন্ধুদের শাস্তি না দিয়ে শুধু প্রতারকদের ধরার জন্য নিচের ৫টি সিগন্যাল একসাথে চেক করবেন:
+১. ব্রাউজার ও হার্ডওয়্যার ফিঙ্গারপ্রিন্ট (Device Fingerprint):
+• ওপেন-সোর্স FingerprintJS লাইব্রেরি দিয়ে ইউজারের ডিভাইসের স্ক্রিন রেজোলিউশন, জিপিইউ (WebGL), ফন্ট এবং ব্যাটারি স্ট্যাটাস থেকে একটি ইউনিক device_hash তৈরি করবেন।
+• যদি রেফারকারী (@rayaan) এবং তার ৩ জন বন্ধুর যেকোনো ১ জনের device_hash হুবহু মিলে যায় (অর্থাৎ একই মোবাইল বা ল্যাপটপ থেকে অ্যাকাউন্ট খোলা হয়েছে), তবে সেই রেফারেলটি স্বয়ংক্রিয়ভাবে বাতিল হবে।
+২. কনটেস্টে সক্রিয় অংশগ্রহণ ও ন্যূনতম স্কোর (Zero-Dummy Rule):
+• ভুয়া অ্যাকাউন্ট খুলে শুধু কনটেস্টে ঢুকে শূন্য (০) পেয়ে বসে থাকলে সেটি গণ্য হবে না।
+• রেফারেল সফল হওয়ার শর্ত হবে: প্রতিটি বন্ধুকে রেটেড কনটেস্টে অন্তত ১টি সমস্যার সঠিক সমাধান করতে হবে এবং কনটেস্টের মোট সময়ের কমপক্ষে ৪০% সময় সক্রিয় থাকতে হবে। একজন মানুষের পক্ষে লাইভ কনটেস্টে একই সাথে নিজের মূল আইডি এবং ৩টি ভুয়া আইডিতে অংক সমাধান করা প্রায় অসম্ভব!
+৩. টাইপিং ও মাউস মুভমেন্ট ক্যাডেন্স (Keystroke & Gaze Telemetry):
+• আপনার CollusionHunter AI এবং MBTS চেক করবে চারটি অ্যাকাউন্টের উত্তর সাবমিট করার সময়ের ব্যবধান এবং টাইপিংয়ের গতি। একই ব্যক্তি ৪টি ট্যাবে খেললে তাদের অ্যাক্টিভিটি টাইমস্ট্যাম্পে অস্বাভাবিক মিল ধরা পড়বে।
+৪. একই সময়ে কনটেস্ট খেলা (Concurrent Session Check):
+• যদি রেফারকারী এবং তার ৩ বন্ধু একই লাইভ কনটেস্টে অংশ নেয়, তবে তাদের আইপি সাবনেট, ডিভাইস টোকেন এবং সলভ প্যাটার্ন ক্রস-চেক করা হবে।
+৫. জিমেইল অ্যাকাউন্টের মান যাচাই (Disposable / Dot-Trick Block):
+• জিমেইলের ডট ট্রিক (যেমন: rayaan@gmail.com আর r.ayaan@gmail.com) ব্যাকএন্ডে নরমালাইজ করে ব্লক করতে হবে, যাতে একই জিমেইল দিয়ে একাধিক @handle খোলা না যায়।
+
+
+
+Arithmo-Edge-এর "Multi-Motivator Referral & Contribution ELO System"-এর সম্পূর্ণ এবং চূড়ান্ত স্পেসিফিকেশন নিচে দেওয়া হলো। আপনি এটি সরাসরি আপনার CLAUDE.md ফাইলে যুক্ত করতে পারবেন।
+
+১. মূল নীতি ও যোগ্যতা (Eligibility & Multi-Motivator Rules)
+
+• নতুন ইউজার উইন্ডো (৭ দিনের শর্ত): ইনভাইটার কেবল সেই @handle-কেই রিকোয়েস্ট পাঠাতে পারবে, যার অ্যাকাউন্ট নিবন্ধনের (Signup) বয়স সর্বোচ্চ ৭ দিনের মধ্যে। (এর ফলে পুরোনো ইউজারদের রিকোয়েস্ট পাঠিয়ে স্প্যাম বা বিরক্ত করার সুযোগ বন্ধ থাকবে)।
+• সক্রিয় অংশগ্রহণ বাধ্যতামূলক: যাকে ইনভাইট রিকোয়েস্ট পাঠানো হচ্ছে (Invitee), তাকে অবশ্যই ইতিমধ্যে অন্তত ১টি রেটেড (Rated) কনটেস্টে কমপক্ষে ১টি সমস্যার সঠিক সমাধান করতে হবে।
+• একাধিক মোটিভেটর অনুমোদন (Max 3 Co-Inviters): বাস্তবে একজন শিক্ষার্থীকে একাধিক বন্ধু উৎসাহিত করতে পারে—তাই একজন নতুন ইউজার তার নিবন্ধনের ৭ দিনের মধ্যে সর্বোচ্চ ৩ জন ভিন্ন ইনভাইটারের রিকোয়েস্টে "হ্যাঁ" (Confirm) করতে পারবে।
+• ডিভাইস ও ক্রনোলজিক্যাল এজ-কেস:
+	• ইনভাইটার এবং ইনভাইটির ডিভাইস ফিঙ্গারপ্রিন্ট (device_hash) অবশ্যই আলাদা হতে হবে (যাতে একই ব্যক্তি একাধিক জিমেইল খুলে হ্যাক করতে না পারে)।
+	• ইনভাইটারের অ্যাকাউন্ট ইনভাইটির আগে না পরে খোলা হয়েছে, কিংবা তারা একই Academy / Private Room-এ আছে কি না—সেটিতে কোনো বাধা থাকবে না।
+• অ্যান্টি-লুপ ও ডাবল রিকোয়েস্ট লক:
+	• @rayaan একবার @tahmid-কে রিকোয়েস্ট পাঠালে (তা "হ্যাঁ" বা "না" যাই হোক), সে আর কখনো @tahmid-কে রিকোয়েস্ট পাঠাতে পারবে না।
+	• No Mutual Swap (\(A \leftrightarrow B\)): @rayaan যদি ইতিমধ্যে @tahmid-এর ইনভাইট গ্রহণ করে থাকে, তবে @tahmid আর @rayaan-কে ইনভাইট রিকোয়েস্ট পাঠাতে পারবে না।
+
+২. সাপ্তাহিক কোটা ও পেইড এক্সপ্যানশন প্যাক (Rate-Limiting & Monetization)
+
+• ফ্রি সাপ্তাহিক সীমা: প্রতিটি @handle ইউজার প্রতি সপ্তাহে (৭ দিনে) বিনামূল্যে সর্বোচ্চ ৭টি ইনভাইট রিকোয়েস্ট পাঠাতে পারবে।
+• আজীবন সীমা নেই: মোট ইনভাইটের কোনো সর্বোচ্চ সীমা নেই; প্রতি সপ্তাহে কোটা রিসেট হবে।
+• অতিরিক্ত ইনভাইট প্যাক ($5.00 = +10 Invites): কোনো কমিউনিটি লিডার বা অ্যাম্বাসেডর যদি এক সপ্তাহে ৭টির বেশি মানুষকে ইনভাইট করতে চান, তবে তিনি Arithmo Wallet থেকে $5.00 খরচ করে তাৎক্ষণিক আরও ১০টি ইনভাইট স্লট কিনতে পারবেন।
+
+৩. রিকোয়েস্ট ও কনফার্মেশন UX ফ্লো (২ বার সুযোগ নেই)
+
+১. রিকোয়েস্ট পাঠানো (Inviter Profile):
+• ইনভাইটার তার প্রোফাইল সেকশনে গিয়ে বন্ধুর @handle টাইপ করে রিকোয়েস্ট পাঠাবে, যা ৭ দিন পর্যন্ত সক্রিয় (Pending) থাকবে।
+• রিকোয়েস্ট পাঠানোর সাথে সাথেই ইনভাইটার নিচে একটি কপিযোগ্য ভেরিফিকেশন লিংক পাবে (যেমন: https://arithmoedge.com)।
+২. হোমপেজ ও ডিপ-লিংক পপ-আপ (Invitee View):
+• ইনভাইটি লগইন করা অবস্থায় হোমপেজে আসলেই (অথবা ওই নির্দিষ্ট ডিপ-লিংকে গেলে) একটি পপ-আপ মডাল দেখতে পাবে: "@rayaan দাবি করছেন তিনি আপনাকে Arithmo-Edge-এ আমন্ত্রণ জানিয়েছেন। এটি কি সত্য?"
+• পপ-আপে ৩টি বাটন থাকবে: [ হ্যাঁ ], [ না ], এবং [ Skip for now ]।
+• [ Skip for now ] চাপলে ইউজার সাময়িকভাবে মূল সাইটে যাতায়াত করতে পারবে, তবে যতক্ষণ না সে "হ্যাঁ" বা "না" চূড়ান্ত করছে, ততক্ষণ প্রতিবার হোমপেজে আসলেই পপ-আপটি দেখাবে।
+• (নোট: ওই ডিপ-লিংকটি Auth-Locked থাকবে; শুধুমাত্র নির্ধারিত @handle ইউজার লগইন থাকলেই লিংকটি কাজ করবে)।
+৩. দ্বিতীয় ধাপের চূড়ান্ত নিশ্চিতকরণ (Irreversible Lock):
+• ইউজার [ হ্যাঁ ] অথবা [ না ] যেটিই চাপুক না কেন, সিস্টেম দ্বিতীয়বার জিজ্ঞাসা করবে: "আপনি কি নিশ্চিত? এই সিদ্ধান্তটি স্থায়ী এবং পরবর্তীতে পরিবর্তনের কোনো সুযোগ নেই।"
+• কনফার্ম করার সাথে সাথেই সিদ্ধান্তটি লক হয়ে যাবে (CONFIRMED বা REJECTED)—২য় বার পরিবর্তনের কোনো সুযোগ থাকবে না। "না" চাপলে কোনো পেনাল্টি বা পুরস্কার নেই।
+
+৪. পুরস্কার বণ্টন (Contribution ELO + Closed-Loop Wallet Credit)
+
+ইনভাইটি দ্বিতীয় ধাপে "হ্যাঁ" কনফার্ম করার সাথে সাথেই ব্যাকএন্ড (Cloudflare Worker + Firebase Admin SDK) স্বয়ংক্রিয়ভাবে নিচের পুরস্কারগুলো প্রদান করবে:
+• প্রতি ১টি সফল ইনভাইটে: ইনভাইটার তাৎক্ষণিক +1 Contribution ELO পাবেন (যা তার গ্লোবাল প্রোফাইল, HQ Induction যোগ্যতা এবং Contribution ELO মাইলস্টোনে যুক্ত হবে)।
+• প্রতি ৩টি সফল ইনভাইট পূর্ণ হলে: প্রতি ৩ জন ভেরিফায়েড বন্ধু পূর্ণ হওয়ার সাথে সাথে ইনভাইটারের Arithmo Wallet-এ স্বয়ংক্রিয়ভাবে +$2.00 ক্রেডিট যোগ হবে।
+
+৫. ব্যাকএন্ড ডেটা স্ট্রাকচার (Firestore: invite_requests/{reqId})
+
+ক্লডকে দিয়ে কোড লেখানোর সময় এই স্কিমাটি ব্যবহার করবেন:
+json
+{
+  "requestId": "REQ_98210",
+  "inviterUid": "uid_rayaan",
+  "inviterHandle": "@rayaan",
+  "inviteeUid": "uid_tahmid",
+  "inviteeHandle": "@tahmid",
+  "status": "PENDING", // "PENDING" | "CONFIRMED" | "REJECTED" | "EXPIRED"
+  "createdAt": "SERVER_TIMESTAMP",
+  "expiresAt": "TIMESTAMP_PLUS_7_DAYS",
+  "inviterDeviceHash": "hash_abc",
+  "inviteeDeviceHash": "hash_xyz"
+}
+
+
+
+
+
+
+
+## 9. Multi-Motivator Referral & Contribution ELO System
+To drive organic Olympiad community growth without spam or self-referral abuse, implement a **Mutual Handshake Referral Verification** protocol:
+
+1. **Eligibility & Multi-Motivator Rules:**
+   - **7-Day New User Window:** An inviter can only send a referral request to a target `@handle` whose account was created within the **last 7 days**.
+   - **Active Contest Proof:** The invitee must have already solved **at least 1 problem in 1 Rated Contest** before a request can be sent.
+   - **Up to 3 Co-Motivators:** A new user can confirm (`"Yes"`) referral requests from up to **3 different inviters** (recognizing that multiple peers may motivate a student to join).
+   - **Device & Anti-Loop Guardrails:**
+     - `inviterDeviceHash` and `inviteeDeviceHash` (via browser fingerprinting) MUST be distinct.
+     - No restrictions on account creation order (inviter may join after invitee) or shared Academy/Private Room membership.
+     - **One-Time Request Lock:** Once `@userA` sends a request to `@userB` (whether confirmed or rejected), `@userA` can never request `@userB` again.
+     - **No Mutual Swap ($A \leftrightarrow B$):** If `@userA` already confirmed `@userB`'s invite, `@userB` cannot send an invite request to `@userA`.
+
+2. **Weekly Rate-Limit & Paid Expansion Pack:**
+   - **Free Weekly Quota:** Each `@handle` can send up to **7 free invite requests per 7-day rolling week** (no lifetime cap).
+   - **Extra Invite Pack (`$5.00 = +10 Invites`):** Users can purchase **+10 additional invite slots** anytime via their closed-loop **Arithmo Wallet**.
+
+3. **Two-Step Irreversible Confirmation UX:**
+   - **Sending Request:** Inviter enters the friend's `@handle` on their profile page. Creates a `PENDING` request valid for **7 days** and generates an auth-locked deep link (`https://arithmoedge.com{requestId}`).
+   - **Homepage & Deep-Link Modal:** Whenever the logged-in invitee visits the homepage (or opens their auth-locked deep link), show a non-blocking modal: *"@inviter claims they invited you to Arithmo-Edge. Is this true?"* with **`[ হ্যাঁ (Yes) ]`**, **`[ না (No) ]`**, and **`[ Skip for now ]`**.
+   - **Persistent Reminder & Final Lock:** Clicking `Skip for now` dismisses the modal temporarily until the next homepage visit. Clicking `Yes` or `No` triggers a second confirmation dialog (*"Are you sure? This decision is permanent and cannot be changed."*). Confirming permanently locks the status (`CONFIRMED` or `REJECTED`).
+
+4. **Automated Rewards (Backend Worker / Admin SDK Only):**
+   - **Per Confirmed Invite:** Inviter receives **+1 Contribution ELO** immediately.
+   - **Every 3 Confirmed Invites:** Inviter automatically receives **+$2.00 Arithmo Wallet Credit** upon every 3rd verified confirmation.
